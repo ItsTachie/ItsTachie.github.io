@@ -9,33 +9,36 @@
     <link rel="icon" href="images/icon.jpg">
 </head>
 <body>
-    
+
+    <header>
     <nav class="navbar">
         <ul>
-            <li><a href="#home">About</a></li>
+            <li><a href="#home" class="active">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    </header>
 
+    <main>
     <section class="home" id="home">
         <div class="home-info">
             <h1>Hi, I'm <span class="home-name">Tatenda Tachivona</span></h1>
             <p>I'm a software engineer with an interest in Backend Development</p>
             <div class="btn-sci">
-                <a href="media/files/cv.pdf" class="btn" target="_blank">Download CV</a>
+                <a href="media/files/cv.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download CV</a>
             </div>
             <div class="sci">
-                <a target="_blank" href="https://github.com/ItsTachie"><i class="fa-brands fa-github"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/tatenda-tachivona-6b4175337/"><i class="fa-brands fa-linkedin"></i></a>
-                <a target="_blank" href="mailto:tachie.005@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://github.com/ItsTachie" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/tatenda-tachivona-6b4175337/" aria-label="Linkedin profile"><i class="fa-brands fa-linkedin"></i></a>
+                <a target="_blank" href="mailto:tachie.005@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
 
         <div class="home-img">
             <div class="img-box">
                 <div class="img-item">
-                    <img src="media/images/icon.jpg" alt="">
+                    <img src="media/images/profile-pic.jpg" alt="Profile photo" loading="lazy">
                 </div>
             </div>
         </div>
@@ -43,7 +46,7 @@
     </section>
 
     <section class="projects" id="projects">
-        <h3> Check out my recent work</h3>
+        <h2> Check out my recent work</h2>
         <p>I've worked on a variety of projects, from simple websites to complex web </p>
         <p>applications. Here are a few of my favorites</p>
         
@@ -58,7 +61,7 @@
             <a href="https://github.com/ItsTachie/TapVinyl" target="_blank">
             <div class="project" id="project1">
                 <div class="project-img">
-                    <img src="media/images/icon.jpg" alt="">
+                    <img src="media/images/icon.jpg" alt="Screenshot of TapVinyl" loading="lazy">
                 </div>
 
                 <div class="project-info">
@@ -83,7 +86,7 @@
             <a href="https://github.com/ItsTachie/AlbumCoversDownloader" target="_blank">
             <div class="project" id="project2">
                 <div class="project-img">
-                    <img src="media/images/coverrip.png" alt="">
+                    <img src="media/images/coverrip.png" alt="Screenshot of album cover downloader" loading="lazy">
                 </div>
 
                 <div class="project-info">
@@ -110,9 +113,11 @@
 
         </div>
     </section>
+    </main>
 
+    <footer>
     <section class="contact" id="contact">
-        <h3>Get in touch...</h3>
+        <h2>Get in touch...</h2>
         <p>Say hello—I'd love to hear from you!</p>
         <br>
         <div class="socials-container">
@@ -124,6 +129,40 @@
             </div>
         </div>
     </section>
+    </footer>
+
+<script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".navbar ul li a");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      let visibleSection = null;
+
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          visibleSection = entry.target;
+        }
+      });
+
+      if (visibleSection) {
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").substring(1) === visibleSection.id) {
+            link.classList.add("active");
+          }
+        });
+      }
+    },
+    {
+      threshold: 0.6 // 60% of the section must be visible
+    }
+  );
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
+      
 
 </body>
 </html>
