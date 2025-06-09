@@ -221,6 +221,8 @@ a {
     height: auto;
     min-width: 300px;
     min-height: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .project-img{
