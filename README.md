@@ -5,7 +5,7 @@ This is my personal portfolio website, showcasing my projects, skills, and conta
 ---
 ## 🔗 Live Demo
 
-👉 [View Site](https:/ItsTachie.github.io/)  
+👉 [View the site](https://ItsTachie.github.io) 
 
 ---
 ## 🛠️ Tech Stack
