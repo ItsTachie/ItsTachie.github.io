@@ -131,36 +131,36 @@
     </section>
     </footer>
 
-<script>
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".navbar ul li a");
+    <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".navbar ul li a");
 
-  const observer = new IntersectionObserver(
-    entries => {
-      let visibleSection = null;
+    const observer = new IntersectionObserver(
+        entries => {
+        let visibleSection = null;
 
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          visibleSection = entry.target;
-        }
-      });
-
-      if (visibleSection) {
-        navLinks.forEach(link => {
-          link.classList.remove("active");
-          if (link.getAttribute("href").substring(1) === visibleSection.id) {
-            link.classList.add("active");
-          }
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            visibleSection = entry.target;
+            }
         });
-      }
-    },
-    {
-      threshold: 0.6 // 60% of the section must be visible
-    }
-  );
 
-  sections.forEach(section => observer.observe(section));
-</script>
+        if (visibleSection) {
+            navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === visibleSection.id) {
+                link.classList.add("active");
+            }
+            });
+        }
+        },
+        {
+        threshold: 0.6 // 60% of the section must be visible
+        }
+    );
+
+    sections.forEach(section => observer.observe(section));
+    </script>
 
       
 
