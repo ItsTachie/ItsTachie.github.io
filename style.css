@@ -24,11 +24,9 @@ a {
     background-color: #fffeef;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     padding-top: 25px;
     padding-bottom: 25px;
-    padding-right: 70px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -52,7 +50,9 @@ a {
 
 .navbar ul li {
     list-style: none;
-    margin-left: 35px;
+    margin: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .navbar ul li a {
