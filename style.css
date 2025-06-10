@@ -316,14 +316,12 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 70px;
+    gap: 35px;
     align-items: center;
 }
 
 .socials-container .sci a {
-    padding: 20px;
-    font-size: 60px;
-    margin: 20px;
-    margin-bottom: 30px;
+    padding: 18px;
+    font-size: 45px;
 }
 
