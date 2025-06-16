@@ -30,10 +30,16 @@ a {
     padding-bottom: 25px;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     z-index: 100;
     justify-content: center;
     border-bottom: 2px solid hwb(213 19% 74% / 0.208);
+}
+
+.nav-icon {
+    position: absolute;
+    left: 20px;
+    margin-right: 40px;
 }
 
 
@@ -41,6 +47,10 @@ a {
 .navbar .logo{
     font-size: 30px;
     font-weight: 700;
+}
+
+#about{
+    margin-left: 40px;
 }
 
 .navbar ul{
@@ -117,6 +127,10 @@ a {
 
     .project {
         width: 90%;
+    }
+
+    .nav-icon {
+        left: 5px;
     }
 }
 
