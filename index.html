@@ -130,36 +130,37 @@
     </section>
     </footer>
 
+    
     <script>
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".navbar ul li a");
-
-    const observer = new IntersectionObserver(
-        entries => {
-        let visibleSection = null;
-
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-            visibleSection = entry.target;
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".navbar ul li a");
+        
+        function updateActiveSection() {
+          let closestSection = null;
+          let minDistance = window.innerHeight;
+        
+          sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const distance = Math.abs(rect.top);
+        
+            if (distance < minDistance && rect.top < window.innerHeight) {
+              minDistance = distance;
+              closestSection = section;
             }
-        });
-
-        if (visibleSection) {
+          });
+        
+          if (closestSection) {
+            const id = closestSection.id;
             navLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href").substring(1) === visibleSection.id) {
-                link.classList.add("active");
-            }
+              link.classList.toggle("active", link.getAttribute("href").substring(1) === id);
             });
+          }
         }
-        },
-        {
-        threshold: 0.6 // 60% of the section must be visible
-        }
-    );
-
-    sections.forEach(section => observer.observe(section));
-    </script>
+        
+        window.addEventListener("scroll", updateActiveSection);
+        window.addEventListener("resize", updateActiveSection);
+        document.addEventListener("DOMContentLoaded", updateActiveSection);
+        </script>
 
       
 
