@@ -358,6 +358,10 @@ a {
 }
 
 
+#project4 .project-img{
+    background-color: rgb(15 23 42); 
+}
+
 .project-links{
     height: auto;
     text-align: center;
