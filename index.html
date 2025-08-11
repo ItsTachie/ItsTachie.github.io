@@ -162,7 +162,7 @@
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-12 place-items-center text-left p-1 [align-items:stretch]">
                     <!-- HandToHand -->
-                    <div class="card bg-[#800000] w-90 sm:w-96 shadow-sm text-white">
+                    <div class="card bg-[#800000] w-90 sm:w-96 shadow-sm text-white transition-transform duration-300 sm:hover:scale-110">
                         <figure class="bg-slate-900 w-full h-64 object-cover">
                           <img class="h-full"
                             src="media/images/favicon.svg"
@@ -184,7 +184,7 @@
                         </div>
                     </div>
                     <!-- TapVinyl -->
-                    <div class="card bg-[#800000]  w-90 sm:w-96 shadow-sm text-white">
+                    <div class="card bg-[#800000]  w-90 sm:w-96 shadow-sm transition-transform duration-300 sm:hover:scale-110 text-white">
                         <figure class="w-full h-64 object-cover">
                           <img class=""
                             src="media/images/TapVinyl.png"
@@ -206,7 +206,7 @@
                         </div>
                     </div>
                     <!-- CoverFetch -->
-                    <div class="card bg-[#800000]  w-90 sm:w-96  shadow-sm text-white">
+                    <div class="card bg-[#800000]  w-90 sm:w-96 transition-transform duration-300 sm:hover:scale-110 shadow-sm text-white">
                         <figure class="w-full h-64 object-cover">
                           <img class=""
                             src="media/images/CoverFetch.png"
@@ -226,7 +226,7 @@
                         </div>
                     </div>
                     <!-- Y Generator -->
-                    <div class="card bg-[#800000] sm:w-96  w-90  shadow-sm text-white">
+                    <div class="card bg-[#800000] sm:w-96  w-90  transition-transform duration-300 sm:hover:scale-110 shadow-sm text-white">
                         <figure class="w-full h-64 object-cover">
                           <img class=""
                             src="media/images/YGenerator.png"
@@ -267,7 +267,14 @@
             const sections = document.querySelectorAll("section");
             const navLinks = document.querySelectorAll("a[href^='#']");
             
+            // Function to check if we're in desktop mode
+            function isDesktop() {
+                return window.innerWidth >= 640; // Tailwind's sm breakpoint
+            }
+            
             function updateActiveSection() {
+                if (!isDesktop()) return; // Skip when menu is collapsed (mobile)
+                
                 let closestSection = null;
                 let minDistance = Number.POSITIVE_INFINITY;
             
@@ -291,14 +298,16 @@
                 }
             }
             
-            // Update on scroll/resize
+            // Run highlight updates only on desktop scroll/resize
             window.addEventListener("scroll", updateActiveSection);
             window.addEventListener("resize", updateActiveSection);
             document.addEventListener("DOMContentLoaded", updateActiveSection);
             
-            // Smooth scroll without instant highlight change
+            // Smooth scroll only for desktop nav clicks
             navLinks.forEach(link => {
                 link.addEventListener("click", (e) => {
+                    if (!isDesktop()) return; // Allow default on mobile
+            
                     e.preventDefault();
                     const targetId = link.getAttribute("href").substring(1);
                     const target = document.getElementById(targetId);
@@ -308,6 +317,7 @@
                 });
             });
             </script>
+            
 
                 
     </body>
