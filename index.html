@@ -17,9 +17,9 @@
                     <a href="#home" class=""><img src="media/images/favicon.png" alt=""></a>
                 </div>
 
-                <div class="invisible sm:visible">
+                <div class="hidden sm:block">
                     <div class="flex gap-8 justify-around text-xl"> 
-                        <a href="#home" class="">Home</a>
+                        <a href="#home" class="">About</a>
                         <a href="#skills" class="">Skills</a>
                         <a href="#projects" class="">Projects</a>
                         <a href="#contact" class="">Contact</a>
@@ -28,16 +28,17 @@
                 </div>
 
                 <div class="navbar-end ">
-                  <div class="dropdown dropdown-left sm:invisible">
+                  <div class="dropdown dropdown-left sm:hidden">
                     <div tabindex="0" role="button" class="btn btn-ghost btn-circle border-none hover:bg-[#800000]">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
                     </div>
                     <ul
                       tabindex="0"
-                      class="menu menu-sm dropdown-content bg-[#800000] rounded-box z-1 mt-3 w-52 p-2 text-white shadow">
-                      <li><a href="#skills">Skills</a></li>
-                      <li><a href="#projects">Projects</a></li>
-                      <li><a href="#contact">Contact</a></li>
+                      class="navmenu menu menu-sm dropdown-content bg-[#800000] rounded-box z-1 mt-3 w-52 p-2 text-white shadow">
+                      <li><a class='text-xl' href="#home">About</a></li>
+                      <li><a class='text-xl' href="#skills">Skills</a></li>
+                      <li><a class='text-xl' href="#projects">Projects</a></li>
+                      <li><a class='text-xl' href="#contact">Contact</a></li>
                     </ul>
                   </div>
                 </div>
@@ -159,15 +160,15 @@
                     <p class="text-lg text-center sm:text-2xl">These are a few highlights from my most recent projects:</p>
                 </div>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-12 place-items-center text-left">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-12 place-items-center text-left p-1 [align-items:stretch]">
                     <!-- HandToHand -->
-                    <div class="card bg-[#800000] w-96 h-120 shadow-sm text-white">
-                        <figure class="bg-slate-900 h-[300px]">
+                    <div class="card bg-[#800000] w-90 sm:w-96 shadow-sm text-white">
+                        <figure class="bg-slate-900 w-full h-64 object-cover">
                           <img class="h-full"
                             src="media/images/favicon.svg"
                             alt="Shoes" />
                         </figure>
-                        <div class="card-body">
+                        <div class="card-body flex flex-col flex-grow">
                           <h2 class="card-title">HandToHand</h2>
                           <p>A safer marketplace made specifically for Zimbabwe</p>
                           <div class="card-actions justify-start">
@@ -183,13 +184,13 @@
                         </div>
                     </div>
                     <!-- TapVinyl -->
-                    <div class="card bg-[#800000] w-96 h-120 shadow-sm text-white">
-                        <figure>
+                    <div class="card bg-[#800000]  w-90 sm:w-96 shadow-sm text-white">
+                        <figure class="w-full h-64 object-cover">
                           <img class=""
                             src="media/images/TapVinyl.png"
                             alt="Shoes" />
                         </figure>
-                        <div class="card-body">
+                        <div class="card-body flex flex-col flex-grow">
                           <h2 class="card-title">TapVinyl</h2>
                           <p>A modern day record player that uses RFID to control music playback</p>
                           <div class="card-actions justify-start">
@@ -199,19 +200,19 @@
                             <div class="badge badge-outline text-white">RFID Reader</div>
                           </div>
                           <div class="card-actions justify-end mt-2">
-                            <a class="btn btn-primary bg-amber-50 border-none text-black "><i class="fa-solid fa-link"  href="https://github.com/ItsTachie/h2h" target="_blank"></i>Demo</a>
+                            <a class="btn btn-primary bg-amber-50 border-none text-black " href="https://youtu.be/yIFws0wX-48" target="_blank"><i class="fa-solid fa-link" ></i>Demo</a>
                             <a class="btn btn-primary bg-amber-50 border-none text-black "  href="https://github.com/ItsTachie/TapVinyl" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
                           </div>
                         </div>
                     </div>
                     <!-- CoverFetch -->
-                    <div class="card bg-[#800000] w-96 h-120 shadow-sm text-white">
-                        <figure>
+                    <div class="card bg-[#800000]  w-90 sm:w-96  shadow-sm text-white">
+                        <figure class="w-full h-64 object-cover">
                           <img class=""
                             src="media/images/CoverFetch.png"
                             alt="Shoes" />
                         </figure>
-                        <div class="card-body">
+                        <div class="card-body flex flex-col flex-grow">
                           <h2 class="card-title">CoverFetch</h2>
                           <p>A website that allows you to download high quality album cover art from albums saved on Spotify</p>
                           <div class="card-actions justify-start">
@@ -219,19 +220,19 @@
                             <div class="badge badge-outline text-white">Spotify API</div>
                           </div>
                           <div class="card-actions justify-end mt-2">
-                            <a class="btn btn-primary bg-amber-50 border-none text-black "><i class="fa-solid fa-link"></i>Demo</a>
-                            <a class="btn btn-primary bg-amber-50 border-none text-black "><i class="fa-brands fa-github"></i>Github</a>
+                            <a class="btn btn-primary bg-amber-50 border-none text-black "  href="https://coverfetch.onrender.com" target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
+                            <a class="btn btn-primary bg-amber-50 border-none text-black "  href="https://github.com/ItsTachie/CoverFetch" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
                           </div>
                         </div>
                     </div>
                     <!-- Y Generator -->
-                    <div class="card bg-[#800000] w-96 h-120  shadow-sm text-white">
-                        <figure>
+                    <div class="card bg-[#800000] sm:w-96  w-90  shadow-sm text-white">
+                        <figure class="w-full h-64 object-cover">
                           <img class=""
                             src="media/images/YGenerator.png"
                             alt="Shoes" />
                         </figure>
-                        <div class="card-body">
+                        <div class="card-body flex flex-col flex-grow">
                           <h2 class="card-title">Random Y Generator</h2>
                           <p>A desktop tool for artists to generate random Y-shapes for practicing perspective in the Drawabox 250-box challenge</p>
                           <div class="card-actions justify-start">
@@ -240,8 +241,8 @@
                             <div class="badge badge-outline">TurtleGraphics</div>
                           </div>
                           <div class="card-actions justify-end mt-2">
-                            <a class="btn btn-primary bg-amber-50 border-none text-black "><i class="fa-solid fa-link"></i>Demo</a>
-                            <a class="btn btn-primary bg-amber-50 border-none text-black "><i class="fa-brands fa-github"></i>Github</a>
+                            <a class="btn btn-primary bg-amber-50 border-none text-black "  href="https://github.com/ItsTachie/random-y-generator/releases" target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
+                            <a class="btn btn-primary bg-amber-50 border-none text-black "  href="https://github.com/ItsTachie/random-y-generator" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
                           </div>
                         </div>
                     </div>
@@ -250,7 +251,7 @@
         </main>
 
         <footer>
-            <section class="my-20 text-center sm:min-h-[90vh] sm:max-w-[1000px] mx-auto" id="contact">
+            <section class="my-20 text-center sm:max-w-[1000px] mx-auto" id="contact">
                 <h2 class="text-4xl sm:text-6xl">Get in touch...</h2>
                 <p class="text-lg mb-4 sm:mb-8 sm:text-2xl">Say hello. I'd love to hear from you!</p>
                 <div class="flex flex-wrap justify-evenly gap-8 items-center">
@@ -262,37 +263,52 @@
             </section>
         </footer>
 
-
         <script>
             const sections = document.querySelectorAll("section");
-            const navLinks = document.querySelectorAll(".navbar ul li a");
+            const navLinks = document.querySelectorAll("a[href^='#']");
             
             function updateActiveSection() {
-              let closestSection = null;
-              let minDistance = window.innerHeight;
+                let closestSection = null;
+                let minDistance = Number.POSITIVE_INFINITY;
             
-              sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                const distance = Math.abs(rect.top);
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const distanceFromTop = Math.abs(rect.top);
             
-                if (distance < minDistance && rect.top < window.innerHeight) {
-                  minDistance = distance;
-                  closestSection = section;
-                }
-              });
-            
-              if (closestSection) {
-                const id = closestSection.id;
-                navLinks.forEach(link => {
-                  link.classList.toggle("active", link.getAttribute("href").substring(1) === id);
+                    if (distanceFromTop < minDistance) {
+                        minDistance = distanceFromTop;
+                        closestSection = section;
+                    }
                 });
-              }
+            
+                if (closestSection) {
+                    const id = closestSection.id;
+                    navLinks.forEach(link => {
+                        const targetId = link.getAttribute("href").replace("#", "");
+                        link.classList.toggle("text-[#800000]", targetId === id);
+                        link.classList.toggle("font-bold", targetId === id);
+                    });
+                }
             }
             
+            // Update on scroll/resize
             window.addEventListener("scroll", updateActiveSection);
             window.addEventListener("resize", updateActiveSection);
             document.addEventListener("DOMContentLoaded", updateActiveSection);
+            
+            // Smooth scroll without instant highlight change
+            navLinks.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute("href").substring(1);
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                });
+            });
             </script>
+
                 
     </body>
 </html>
