@@ -54,7 +54,7 @@
                     <h1 class="text-6xl text-center sm:text-left">Hi, I'm <span class="home-name">Tatenda Tachivona</span></h1>
                     <p class="text-xl text-center mb-4 sm:text-left">I'm a software engineer with an interest in Backend Development</p>
                     <div class="mb-2 ">
-                        <a href="media/files/Tatenda_Tachivona.pdf" class="btn rounded-full text-xl shadow-none text-white bg-[#800000] hover:text-[#800000] hover:bg-[#fffeef] hover:border-2 border-[#800000]" target="_blank" rel="noopener noreferrer">Download CV</a>
+                        <a href="media/files/Tatenda_Tachivona_CV.pdf" class="btn rounded-full text-xl shadow-none text-white bg-[#800000] hover:text-[#800000] hover:bg-[#fffeef] hover:border-2 border-[#800000]" target="_blank" rel="noopener noreferrer">Download CV</a>
                     </div>
                     <div class="flex gap-4 text-xl ">
 
@@ -92,8 +92,8 @@
                         <p>CSS3</p>
                     </div>
                     <div class="">
-                        <img class="h-20 w-20"  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                        <p>JavaScript</p>
+                        <img class="h-20 w-20"  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                        <p>TailwindCSS</p>
                     </div>
                 </div>
 
@@ -107,6 +107,10 @@
                     <div class="">
                         <img class="h-20 w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" />
                         <p>Flask</p>
+                    </div>
+                    <div class="">
+                        <img class="h-20 w-20" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" />
+                        <p>FastAPI</p>
                     </div>
                     <div class="">
                         <img class="h-20 w-20"  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
@@ -177,9 +181,11 @@
                         </figure>
                         <div class="card-body flex flex-col flex-grow">
                           <h2 class="card-title">HandToHand</h2>
-                          <p>A safer marketplace made specifically for Zimbabwe</p>
+                          <p>Built a comprehensive e-commerce platform for peer-to-peer trading.
+                            Implemented user authentication, listing management, and real-time 
+                            search functionality to streamline the buying and selling process.</p>
                           <div class="card-actions justify-start">
-                            <div class="badge badge-outline">Python (Flask)</div>
+                            <div class="badge badge-outline">Flask</div>
                             <div class="badge badge-outline">PostgreSQL</div>
                             <div class="badge badge-outline">TailwindCSS</div>
                             <div class="badge badge-outline">Supabase</div>
@@ -199,7 +205,9 @@
                         </figure>
                         <div class="card-body flex flex-col flex-grow">
                           <h2 class="card-title">TapVinyl</h2>
-                          <p>A modern day record player that uses RFID to control music playback</p>
+                          <p>Developed a physical interface using a Raspberry Pi and RFID technology to control Spotify playback.
+                            Mapped unique RFID stickers on physical album art to specific URI triggers, bridging
+                             the gap between digital libraries and tactile music experiences.</p>
                           <div class="card-actions justify-start">
                             <div class="badge badge-outline text-white">Python</div>
                             <div class="badge badge-outline text-white">Raspberry Pi</div>
@@ -212,6 +220,29 @@
                           </div>
                         </div>
                     </div>
+                    <!-- Hand gesture Machine learning -->
+                    <div class="card bg-[#800000]  w-90 sm:w-96 transition-transform duration-300 sm:hover:scale-110 shadow-sm text-white">
+                        <figure class="w-full h-64 object-cover">
+                          <img class=""
+                            src="media/images/ML.png"
+                            alt="Shoes" />
+                        </figure>
+                        <div class="card-body flex flex-col flex-grow">
+                          <h2 class="card-title">Real-Time Gesture Classifier</h2>
+                          <p>Engineered a Rock-Paper-Scissors classifier using Transfer Learning and CNNs.
+                            Utilized OpenCV for live image acquisition and preprocessing, achieving high 
+                            accuracy with a minimal dataset collected via webcam.</p>
+                          <div class="card-actions justify-start">
+                            <div class="badge badge-outline text-white">Python</div>
+                            <div class="badge badge-outline text-white">TensorFlow</div>
+                            <div class="badge badge-outline text-white">OpenCV</div>
+                        </div>
+                          <div class="card-actions justify-end mt-2">
+                            <!-- <a class="btn btn-primary bg-amber-50 border-none text-black "  href="#" target="_blank"><i class="fa-solid fa-link"></i>Demo</a> -->
+                            <a class="btn btn-primary bg-amber-50 border-none text-black "  href="https://github.com/ItsTachie/Real-Time-Gesture-Classifier" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
+                          </div>
+                        </div>
+                    </div>
                     <!-- CoverFetch -->
                     <div class="card bg-[#800000]  w-90 sm:w-96 transition-transform duration-300 sm:hover:scale-110 shadow-sm text-white">
                         <figure class="w-full h-64 object-cover">
@@ -221,9 +252,12 @@
                         </figure>
                         <div class="card-body flex flex-col flex-grow">
                           <h2 class="card-title">CoverFetch</h2>
-                          <p>A website that allows you to download high quality album cover art from albums saved on Spotify</p>
+                          <p>Designed a web application that interfaces with the Spotify Web API to 
+                            fetch and download high-resolution album artwork.Focused on a clean UI and 
+                            efficient data fetching to allow users to archive visual assets from their 
+                            saved libraries.</p>
                           <div class="card-actions justify-start">
-                            <div class="badge badge-outline text-white">Python</div>
+                            <div class="badge badge-outline text-white">Flask</div>
                             <div class="badge badge-outline text-white">Spotify API</div>
                           </div>
                           <div class="card-actions justify-end mt-2">
@@ -241,15 +275,17 @@
                         </figure>
                         <div class="card-body flex flex-col flex-grow">
                           <h2 class="card-title">Random Y Generator</h2>
-                          <p>A desktop tool for artists to generate random Y-shapes for practicing perspective in the Drawabox 250-box challenge</p>
+                          <p>Created a productivity tool designed to automate the setup for the "250 Box Challenge."
+                            Generates randomized "Y" orientations to serve as the foundation for 3D perspective 
+                            drawings, significantly reducing manual prep time for artists.</p>
                           <div class="card-actions justify-start">
                             <div class="badge badge-outline">Python</div>
                             <div class="badge badge-outline">Tkinter</div>
                             <div class="badge badge-outline">TurtleGraphics</div>
                           </div>
                           <div class="card-actions justify-end mt-2">
-                            <a class="btn btn-primary bg-amber-50 border-none text-black "  href="https://github.com/ItsTachie/random-y-generator/releases" target="_blank"><i class="fa-solid fa-link"></i>Demo</a>
-                            <a class="btn btn-primary bg-amber-50 border-none text-black "  href="https://github.com/ItsTachie/random-y-generator" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
+                            <!-- <a class="btn btn-primary bg-amber-50 border-none text-black "  href="https://github.com/ItsTachie/random-y-generator/releases" target="_blank"><i class="fa-solid fa-link"></i>Demo</a> -->
+                            <a class="btn btn-primary bg-amber-50 border-none text-black "  href="https://github.com/ItsTachie/random-y-generator/releases" target="_blank"><i class="fa-brands fa-github"></i>Github</a>
                           </div>
                         </div>
                     </div>
