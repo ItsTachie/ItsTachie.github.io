@@ -1,24 +1,26 @@
-# 🌐 Tatenda Tachivona – Portfolio
+# My Portfolio Website
 
-This is my personal portfolio website, showcasing my projects, skills, and contact information. Built using plain HTML, CSS, and hosted via GitHub Pages.
+This is my personal portfolio website, showcasing my projects, skills, and contact information. Built using HTML5, TailwindCSS, Javascript and hosted via GitHub Pages.
 
 ---
-## 🔗 Live Demo
+
+## Live Demo
 
 👉 [View the site](https://ItsTachie.github.io)
 
 ---
-## 🛠️ Tech Stack
+
+## Tech Stack
 
 - HTML5  
-- CSS3  
-- Font Awesome (for icons)  
-- Responsive design with Flexbox  
+- TailwindCSS
+- JavaScript
+- Devicon (for icons)   
 - GitHub Pages for hosting  
-- JavaScript (minimal)
 
 ---
-## 🧠 Features
+
+## Features
 
 - Smooth scrolling navigation
 - Dynamic project cards with tags and links
